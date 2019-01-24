@@ -3,4 +3,4 @@
 ### Because it's hard.
 
 [repository link](https://github.com/sharonohmg/CODE2)
-![cat](https://en.wiktionary.org/wiki/cat#/media/File:Cat03.jpg "cat")
+![cat](https://i.kym-cdn.com/entries/icons/mobile/000/026/489/crying.jpg "cat")
