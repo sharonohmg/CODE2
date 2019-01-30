@@ -46,3 +46,11 @@ void draw(){
     fill(0);
   }
 }
+
+void displayText(String text){
+  for(int i=0; i<4; i++){
+   fill(0);
+   textSize(30);
+  text(text, width/2, height/2);
+  }
+}
