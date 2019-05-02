@@ -1,42 +1,46 @@
 int sceneNumber=0;
-
+int state=0;
+float x,y;
 void setup(){
   size(600,600);
+  x=width/2;
+  y=height/2;
 }
 
 void draw(){
-  switch(sceneNumber){
+  switch(state){
     case 0:
-      scene0();
+    drawIntro();
     break;
-    
-    case 1:
-      scene1();
+  case 1:
+    drawScene1();
     break;
-    
-    case 2:
-      scene2();
-    break;
-    
-    case 3:
-      sceneNumber=0;
-    break;
-    
+ 
   }
 }
 
-void mousePressed(){
-  sceneNumber++;
+void keyPressed() {
+  switch (state) {
+  case 0:
+    if (key == ENTER) {
+      state = 1;
+    }
+    break;
+  }
 }
 
-void scene0(){
-  background(0);
+void drawIntro() {
+  background(255, 0, 0);
+  fill(0);
+  ellipse(width/2,height/2,100,100);
 }
 
-void scene1(){
-  background(255);
-}
-
-void scene2(){
-  background(100);
+void drawScene1() {
+  background(0, 0, 255);
+  y-=5;
+  fill(255);
+  ellipse(x,y,100,100);
+  if(y==height/2){
+    state=2;
+  }
 }
